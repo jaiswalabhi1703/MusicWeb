@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peace Within</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/STK/Music/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SPECIFICATIONS</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">CONNECT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>The<br> Real<br>Sound<br>Wave</h1>
+            </div>
+            <div class="right-col">
+                <div class="player-container">
+                    <div class="circle-player">
+                        <img src="/STK/Music/image.png">
+                        <img src="/STK/Music/song-image.jpg" id="songImage">
+                        <img src="/STK/Music/play.png" id="icon">
+                    </div>
+                    <p id="songName">TUBA-"APNE RANG ME RANG DE"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="mySongs">
+        <source src="/STK/Music/Record (online-voice-recorder.com) (1).mp3" type="audio/mp3"> 
+    </audio>
+    <script>
+        var mySongs=document.getElementById("mySongs");
+        var icon=document.getElementById("icon");
+
+        icon.onclick =function(){
+            if(mySongs.paused)
+            {
+                mySongs.play();
+                icon.src="/STK/Music/pause.png";
+        }
+        else{
+            mySongs.pause();
+                icon.src="/STK/Music/play.png";
+        }
+    }
+</script>
+</body>
+</html>
